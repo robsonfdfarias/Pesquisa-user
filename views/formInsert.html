@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir novo usuário</title>
+    <style>
+        body{
+            margin: 10px;
+        }
+        #titulo{
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        input[type="text"]{
+            width: 90%;
+            height: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="../script/scriptForms.js"></script>
+</head>
+<body>
+    <div id="titulo">Inserir usuário</div>
+    Nome: <input type="text" name="nome" id="nome"><br>
+    Cidade: <input type="text" name="cidade" id="cidade"><br>
+    <button onclick="valida()">Inserir</button>
+
+    <script>
+        let nome = document.getElementById('nome');
+        let cidade = document.getElementById('cidade');
+        function valida(){
+            // alert(nome.value)
+            if(nome.value!='' && nome.value!=null && nome.value!='undefined'){
+                if(cidade.value!='' && cidade.value!=null && cidade.value!='undefined'){
+                    criarUsuario(nome.value, cidade.value);
+                }else{
+                    alert('Por favor, preencha o campo cidade')
+                }
+            }else{
+                alert('Por favor, preencha o campo nome')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Usuário</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #pesquisa{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="loginDiv">
+        <div id="divInfo">Área restrita, por favor, faça o login para ter acesso.</div>
+    </div>
+    <header>
+        <h1>Pesquisa de Usuário</h1>
+    </header>
+
+    <section>
+        <!-- <form id="userSearchForm"> -->
+            <label for="userName">Nome do Usuário:</label>
+            <input type="search" id="nome" name="nome" placeholder="Digite o nome do usuário">
+
+            <button onclick="pesquisar()">Pesquisar</button><button onclick="inserir()">+ Inserir</button><button onclick="deslogar()">Sair</button>
+        <!-- </form> -->
+
+        <!-- Resultados da pesquisa serão exibidos aqui -->
+        <div id="pesquisa"></div>
+        <!-- <span class="dd" id="n1">qq</span>
+        <span class="dd" id="n2"></span> -->
+    </section>
+
+    <script src="./script/script.js"></script>
+
+</body>
+</html>
